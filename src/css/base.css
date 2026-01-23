@@ -1,7 +1,17 @@
 :root {
   /* font-family: Inter, Avenir, Helvetica, Arial, sans-serif; */
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
-    Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-family:
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    'Segoe UI',
+    Roboto,
+    Oxygen,
+    Ubuntu,
+    Cantarell,
+    'Open Sans',
+    'Helvetica Neue',
+    sans-serif;
   font-size: 16px;
   line-height: 1.5;
   font-weight: 400;
@@ -29,4 +39,123 @@ main {
 }
 main:has(.back-link) {
   text-align: center;
+}
+.form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 36px 0;
+  gap: 8px;
+}
+.input {
+  width: 272px;
+  height: 36px;
+  padding-left: 16px;
+
+  border: 1px solid #808080;
+  border-radius: 4px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
+  font-size: 16px;
+}
+
+.input::placeholder {
+  font-size: 16px;
+  letter-spacing: 0.04em;
+  color: #808080;
+  font-family: 'Montserrat', sans-serif;
+}
+.input:focus {
+  border: 1px solid #000;
+  /*outline: none;*/
+}
+.input:active {
+  border: 1px solid #4e75ff;
+  /*outline: none;*/
+}
+button {
+  padding: 8px 16px;
+  width: 91px;
+  height: 40px;
+
+  border: none;
+  border-radius: 8px;
+  background-color: #4e75ff;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: 0.04em;
+  color: #fff;
+  font-family: 'Montserrat', sans-serif;
+
+  cursor: pointer;
+  transition: background-color 250ms ease;
+}
+button:hover {
+  background: #6c8cff;
+}
+
+.gallery {
+  width: 1128px;
+  margin: 24px auto;
+
+  display: grid;
+  grid-template-columns: repeat(3, 360px);
+  gap: 24px;
+
+  list-style: none;
+  padding: 0;
+}
+.gallery-item {
+  width: 360px;
+  height: 200px;
+
+  border: 1px solid #808080;
+  border-radius: 4px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  display: flex;
+  flex-direction: column;
+  transition: transform 250ms ease;
+}
+
+.gallery-item:hover {
+  transform: scale(1.02);
+}
+
+.gallery-image {
+  width: 100%;
+  aspect-ratio: 360 / 152;
+
+  object-fit: cover;
+  display: block;
+}
+
+.info {
+  height: 48px;
+
+  display: flex;
+  text-align: center;
+  align-items: center;
+  column-gap: 32px;
+
+  font-size: 12px;
+  line-height: 2;
+  letter-spacing: 0.04em;
+  color: #2e2f42;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.load-more {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin: 20px auto 44px;
+  width: 100%;
+  max-width: 200px;
+}
+
+.hidden {
+  display: none !important;
 }
